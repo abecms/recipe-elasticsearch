@@ -1,6 +1,8 @@
 {
   "elasticsearch": {
-    "active": "true"
+    "active": "true",
+    "host": "127.0.0.1",
+    "port": "9200"
   },
   "plugins": [
     "gregorybesson/abe-elasticsearch"
