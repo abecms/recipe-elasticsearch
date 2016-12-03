@@ -9,8 +9,8 @@ This Abe recipe demonstrates how to setup abe-elasticsearch plugin and use it on
 3. abe install gregorybesson/abe-elasticsearch
 4. Once you have an elasticsearch instance ready, configure abe.json and the templates using elasticsearch (jquery-autocomplete and jquery-livesearch) with the host ad port of your elasticsearch instance.
 4. abe serve
-5. open your browser at the address : http://localhost:3000/abe/plugin/abe-elasticsearch/console and index the blog with your elasticsearch
-6. Enjoy ! (go to the site on http://localhost:3000/autocomplete.html or http://localhost:3000/livesearch.html to see elasticsearch in action)
+5. open your browser at the address : <http://localhost:3000/abe/plugin/abe-elasticsearch/console> and index the blog with your elasticsearch
+6. Enjoy ! (go to the site on <http://localhost:3000/autocomplete.html> or <http://localhost:3000/livesearch.html> to see elasticsearch in action)
 
 # Description
 In this demo, you'll see 
@@ -27,7 +27,7 @@ Change the abe.json config if your elasticsearch instance is located elsewhere.
 
 Don't forget to add the cors config to your config/elasticsearch.yml in your elasticsearch server installation (see details here:https://github.com/gregorybesson/abe-elasticsearch)
 
-Once done, index the Abe published content (some articles are already published) with you elasticsearch instance: http://localhost:3000/abe/plugin/abe-elasticsearch/console click on the "index" button.
+Once done, index the Abe published content (some articles are already published) with you elasticsearch instance: <http://localhost:3000/abe/plugin/abe-elasticsearch/console> click on the "index" button.
 
 Once done, all the published posts are indexed in Elasticsearch. If you create a new content and publish it, it will be automatically indexed.
 
@@ -108,6 +108,6 @@ success:function(data)
 ```
 
 # The abe-elasticsearch plugin console
-/abe/plugin/abe-elasticsearch/console
+<http://localhost:3000/abe/plugin/abe-elasticsearch/console>
 
 You'll be able to index or reindex your whole Abe website in a breeze. As soon as the index is finished, you'll be able to search your content on your Elasticsearch instance from the front.
