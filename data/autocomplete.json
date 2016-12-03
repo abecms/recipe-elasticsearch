@@ -1,0 +1,37 @@
+{
+  "selectTemplate": [
+    "jquery-autocomplete"
+  ],
+  "name": "autocomplete",
+  "abe_meta": {
+    "template": "jquery-autocomplete",
+    "link": "/autocomplete.html",
+    "date": "2016-12-03T16:34:04.324Z",
+    "latest": {
+      "date": "2016-12-03T17:53:57.470Z",
+      "abeUrl": "/autocomplete.html"
+    },
+    "status": "publish",
+    "draft": {
+      "latest": {
+        "date": "2016-12-03T16:34:04.324Z",
+        "abeUrl": "/autocomplete-abe-d20161203T163404324Z.html"
+      },
+      "date": "2016-12-03T16:34:04.324Z",
+      "abeUrl": "/autocomplete-abe-d20161203T163404324Z.html"
+    },
+    "complete": "100",
+    "cleanName": "autocomplete",
+    "cleanFilename": "",
+    "publish": {
+      "latest": {
+        "date": "2016-12-03T17:53:57.470Z",
+        "abeUrl": "/autocomplete.html"
+      },
+      "date": "2016-12-03T17:53:57.470Z",
+      "abeUrl": "/autocomplete.html"
+    }
+  },
+  "abeEditor": "false",
+  "oldFilePath": "/autocomplete.html"
+}

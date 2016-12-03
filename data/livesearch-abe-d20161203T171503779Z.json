@@ -1,0 +1,23 @@
+{
+  "selectTemplate": "jquery-livesearch",
+  "name": "livesearch",
+  "abe_meta": {
+    "template": "jquery-livesearch",
+    "link": "/livesearch.html",
+    "date": "2016-12-03T17:15:03.779Z",
+    "latest": {
+      "date": "2016-12-03T17:15:03.779Z",
+      "abeUrl": "/livesearch-abe-d20161203T171503779Z.html"
+    },
+    "status": "draft",
+    "draft": {
+      "latest": {
+        "date": "2016-12-03T17:15:03.779Z",
+        "abeUrl": "/livesearch-abe-d20161203T171503779Z.html"
+      },
+      "date": "2016-12-03T17:15:03.779Z",
+      "abeUrl": "/livesearch-abe-d20161203T171503779Z.html"
+    },
+    "complete": "100"
+  }
+}

@@ -1,0 +1,62 @@
+<html>  
+    <head>  
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+      <title>Recipe</title>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />  
+    </head>  
+    <body>  
+     <div class="container">  
+        <br />  
+        <h2 align="center">Ajax Live Data Search using Jquery and ElasticSearch</h2><br />  
+        <div class="form-group">  
+          <div class="input-group">  
+            <span class="input-group-addon">Search</span>  
+            <input type="text" name="search_text" id="search_text" placeholder="Search" class="form-control" /> 
+          </div>  
+        </div>  
+        <br />  
+        <div id="result"></div>  
+     </div>  
+    </body>  
+</html>  
+<script>  
+  $(document).ready(function(){  
+  $('#search_text').keyup(function(){  
+    var txt = $(this).val();  
+    var postData = {
+      "query": {
+        "query_string": {
+          "fields": ["article_content", "article_title", "abe_meta.template"], 
+          "query": txt + "*"
+        }
+      }
+    }
+    if(txt != '') {  
+      $.ajax({  
+        url: "http://localhost:9200/recipe-elasticsearch/_search",
+        method: "POST",
+        crossDomain: true,
+        dataType: "JSON",  
+        data: JSON.stringify(postData),
+        success:function(data)  
+        { 
+          var res= "<div class='table-responsive'><table class='table table bordered'>";
+          $.map(data.hits.hits, function(item) {
+            res += "<tr>"
+            res += "<td><a href='" + item._source.abe_meta.link + "'>" + item._source.article_title + "</a></td>"
+            res += "<td>" + item._source.article_content + "</td>"
+            res += "<td><img src='" + item._source.article_main_image + "' width='250'/></td>"
+            res += "</tr>"
+          })
+          res += "</table></div>"
+          $('#result').html(res);  
+        }  
+      });  
+    } else {  
+      $('#result').html('');                 
+    }  
+  });  
+ });  
+ </script>

@@ -1,0 +1,8 @@
+{
+  "elasticsearch": {
+    "active": "true"
+  },
+  "plugins": [
+    "gregorybesson/abe-elasticsearch"
+  ]
+}
