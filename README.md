@@ -23,7 +23,9 @@ You'll find also "default" templates (index and single) to create regular conten
 
 # Installation
 Before enjoying the demo, you must have an elasticsearch instance available. The default configuration in abe.json looks for an instance at 127.0.0.1:9200
-Change the config if your elasticsearch instance is located elsewhere.
+Change the abe.json config if your elasticsearch instance is located elsewhere.
+
+Don't forget to add the cors config to your config/elasticsearch.yml in your elasticsearch server installation (see details here:https://github.com/gregorybesson/abe-elasticsearch)
 
 Once done, index the Abe published content (some articles are already published) with you elasticsearch instance: http://localhost:3000/abe/plugin/abe-elasticsearch/console click on the "index" button.
 
@@ -76,5 +78,36 @@ This template uses jquery to live search blog posts on your elasticsearch instan
 A published post already exist: livesearch.html
 create your own and try to create a partial you'll use on your header.
 
-# The abe-elasticsearch plugin console /abe/plugin/abe-elasticsearch/console
+## How it works
+The search query (see above for explanation):
+```
+var postData = {
+  "query": {
+    "query_string": {
+      "fields": ["article_content", "article_title", "abe_meta.template"], 
+      "query": txt + "*"
+    }
+  }
+}
+```
+On success, we format the result to display it has a table:
+```
+success:function(data)  
+{ 
+  var res= "<div class='table-responsive'><table class='table table bordered'>";
+  $.map(data.hits.hits, function(item) {
+    res += "<tr>"
+    res += "<td><a href='" + item._source.abe_meta.link + "'>" + item._source.article_title + "</a></td>"
+    res += "<td>" + item._source.article_content + "</td>"
+    res += "<td><img src='" + item._source.article_main_image + "' width='250'/></td>"
+    res += "</tr>"
+  })
+  res += "</table></div>"
+  $('#result').html(res);  
+}
+```
+
+# The abe-elasticsearch plugin console
+/abe/plugin/abe-elasticsearch/console
+
 You'll be able to index or reindex your whole Abe website in a breeze. As soon as the index is finished, you'll be able to search your content on your Elasticsearch instance from the front.
