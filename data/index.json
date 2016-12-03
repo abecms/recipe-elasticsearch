@@ -6,7 +6,7 @@
     "type": "draft",
     "date": "2016-11-05T16:32:09.098Z",
     "latest": {
-      "date": "2016-11-22T11:34:20.666Z",
+      "date": "2016-12-03T17:59:17.376Z",
       "abeUrl": "/index.html"
     },
     "status": "publish",
@@ -22,7 +22,7 @@
     "cleanFilename": "",
     "publish": {
       "latest": {
-        "date": "2016-11-22T11:34:20.666Z",
+        "date": "2016-12-03T17:59:17.376Z",
         "abeUrl": "/index.html"
       },
       "date": "2016-11-22T11:34:20.666Z",
@@ -36,7 +36,7 @@
       "article_date": "20 March 2016",
       "category_json": [
         {
-          "category": "Photography"
+          "category": "Abe"
         }
       ],
       "abe_meta": {
@@ -46,7 +46,7 @@
         "type": "publish",
         "date": "2016-11-05T17:05:38.370Z",
         "latest": {
-          "date": "2016-11-05T17:06:33.645Z",
+          "date": "2016-12-03T16:33:43.742Z",
           "abeUrl": "/articles/article-3.html"
         },
         "status": "publish",
@@ -64,7 +64,7 @@
           "date": "2016-11-05T17:06:33.645Z",
           "abeUrl": "/articles/article-3.html",
           "latest": {
-            "date": "2016-11-05T17:06:33.645Z",
+            "date": "2016-12-03T16:33:43.742Z",
             "abeUrl": "/articles/article-3.html"
           }
         }
@@ -155,5 +155,6 @@
   "oldFilePath": "/index.html",
   "selectTemplate": [
     "index"
-  ]
+  ],
+  "abeEditor": "false"
 }
