@@ -21,10 +21,17 @@ These templates uses jquery and jquery-ui to query elasticsearch. The usage of j
 You'll find also a "default" template to create regular content and already published content to ease your discovery. Don't hesitate to add content and test with this recipe.
 
 ## The autocomplete template
+name:jquery-autocomplete
 This template includes a partial containing jquery + jquery-ui autocomplete which requests your elasticsearch instance.
 
+A published post already exist: autocomplete.html but you can create your own post. You can also create a partial to add this search feature on all pages.
+
 ## The livesearch template
+name:jquery-livesearch
 This template uses jquery to live search blog posts on your elasticsearch instance.
+
+A published post already exist: livesearch.html
+create your own and try to create a partial you'll use on your header.
 
 ## The abe-elasticsearch plugin console /abe/plugin/abe-elasticsearch/console
 You'll be able to index or reindex your whole Abe website in a breeze. As soon as the index is finished, you'll be able to search your content on your Elasticsearch instance from the front.
