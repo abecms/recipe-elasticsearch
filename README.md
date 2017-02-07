@@ -7,7 +7,7 @@ This Abe recipe demonstrates how to setup abe-elasticsearch plugin and use it on
 1. git clone https://github.com/Abejs/recipe-elasticsearch.git
 2. cd recipe-elasticsearch
 3. abe install gregorybesson/abe-elasticsearch
-4. Once you have an elasticsearch instance ready, configure abe.json and the templates using elasticsearch (jquery-autocomplete and jquery-livesearch) with the host ad port of your elasticsearch instance.
+4. Once you have an elasticsearch instance ready, configure abe.json and the templates using elasticsearch (jquery-autocomplete and jquery-livesearch) with the host and port of your elasticsearch instance.
 4. abe serve
 5. open your browser at the address : <http://localhost:3000/abe/plugin/abe-elasticsearch/console> and index the blog with your elasticsearch
 6. Enjoy ! (go to the site on <http://localhost:3000/autocomplete.html> or <http://localhost:3000/livesearch.html> to see elasticsearch in action)
@@ -20,6 +20,7 @@ In this demo, you'll see
 These templates uses jquery and jquery-ui to query elasticsearch. The usage of jquery and elasticsearch are not directly related to Abe. It's an illustration of how you can add a search engine on your Abe static website: Using the plugin abe-elasticsearch, each time a contributor publish a content from the Abe editor, this content is indexed by an Elasticsearch instance and available on your front.
 
 You'll find also "default" templates (index and single) to create regular content and you'll find already published content to ease your discovery. Don't hesitate to add content and test with this recipe.
+You'll also find a notindexed.html template and already created not-indexed-content.html which illustrates content that won't be indexed by Elasticsearch. (Please refer to the plugin configuration to see how you configure specific templates for indexation).
 
 # Installation
 Before enjoying the demo, you must have an elasticsearch instance available. The default configuration in abe.json looks for an instance at 127.0.0.1:9200
