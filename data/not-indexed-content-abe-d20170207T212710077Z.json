@@ -1,0 +1,35 @@
+{
+  "name": "not indexed content",
+  "abe_meta": {
+    "template": "notindexed",
+    "link": "/not-indexed-content.html",
+    "date": "2017-02-07T20:43:30.216Z",
+    "latest": {
+      "date": "2017-02-07T21:27:10.077Z",
+      "abeUrl": "/not-indexed-content-abe-d20170207T212710077Z.html"
+    },
+    "status": "draft",
+    "draft": {
+      "latest": {
+        "date": "2017-02-07T21:27:10.077Z",
+        "abeUrl": "/not-indexed-content-abe-d20170207T212710077Z.html"
+      },
+      "date": "2017-02-07T20:43:30.216Z",
+      "abeUrl": "/not-indexed-content-abe-d20170207T204330216Z.html"
+    },
+    "complete": "100",
+    "cleanName": "not-indexed-content",
+    "cleanFilename": ""
+  },
+  "category_json": [
+    {
+      "category": "Abe"
+    }
+  ],
+  "article_main_image": "/image/abe-logo-code-0784.png",
+  "article_title": "Abe is the king",
+  "article_date": "2017-02-05",
+  "article_highlight": "This content is not indexed in Elastic.",
+  "oldFilePath": "/not-indexed-content.html",
+  "article_content": "This is a content which is not indexed in Elastic Search... How ? You just can define which templates will be authorized to be indexed. This is done in abe.json (see the doc).<div><br></div><div>Search for the words \"the magical CMS\" in the autocomplete page for example.</div>"
+}
