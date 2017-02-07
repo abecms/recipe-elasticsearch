@@ -6,7 +6,7 @@ This Abe recipe demonstrates how to setup abe-elasticsearch plugin and use it on
 # Installation
 1. git clone https://github.com/abecms/recipe-elasticsearch.git
 2. cd recipe-elasticsearch
-3. abe install gregorybesson/abe-elasticsearch
+3. abe install abecms/abe-elasticsearch
 4. Once you have an elasticsearch instance ready, configure abe.json and the templates using elasticsearch (jquery-autocomplete and jquery-livesearch) with the host and port of your elasticsearch instance.
 4. abe serve
 5. open your browser at the address : <http://localhost:3000/abe/plugin/abe-elasticsearch/console> and index the blog with your elasticsearch
