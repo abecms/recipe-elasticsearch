@@ -4,7 +4,7 @@ This Abe recipe demonstrates how to setup abe-elasticsearch plugin and use it on
 ![Screenshot](/site/screenshot.png?raw=true)
 
 # Installation
-1. git clone https://github.com/Abejs/recipe-elasticsearch.git
+1. git clone https://github.com/abecms/recipe-elasticsearch.git
 2. cd recipe-elasticsearch
 3. abe install gregorybesson/abe-elasticsearch
 4. Once you have an elasticsearch instance ready, configure abe.json and the templates using elasticsearch (jquery-autocomplete and jquery-livesearch) with the host and port of your elasticsearch instance.
@@ -26,11 +26,11 @@ You'll also find a notindexed.html template and already created not-indexed-cont
 Before enjoying the demo, you must have an elasticsearch instance available. The default configuration in abe.json looks for an instance at 127.0.0.1:9200
 Change the abe.json config if your elasticsearch instance is located elsewhere.
 
-Don't forget to add the cors config to your config/elasticsearch.yml in your elasticsearch server installation (see details here:https://github.com/gregorybesson/abe-elasticsearch)
+Don't forget to add the cors config to your config/elasticsearch.yml in your elasticsearch server installation (see details here:https://github.com/abecms/abe-elasticsearch)
 
 Once done, index the Abe published content (some articles are already published) with you elasticsearch instance: <http://localhost:3000/abe/plugin/abe-elasticsearch/console> click on the "index" button.
 
-Once done, all the published posts are indexed in Elasticsearch. If you create a new content and publish it, it will be automatically indexed.
+Once done, all the published posts are indexed in Elasticsearch. If you create a new content and publish it, it will be automatically indexed. Note : If you have listed authorized templates in the elasticsearch config of abe.json, only contents associated with these templates will be indexed.
 
 # The autocomplete template
 name:jquery-autocomplete
