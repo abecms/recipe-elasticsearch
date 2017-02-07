@@ -8,6 +8,6 @@
     ]
   },
   "plugins": [
-    "gregorybesson/abe-elasticsearch"
+    "abecms/abe-elasticsearch"
   ]
 }
