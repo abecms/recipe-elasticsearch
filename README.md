@@ -51,12 +51,32 @@ var postData = {
   }
 }
 ```
-The ajax request then use this query. Note in the "url" that we query localhost:9200. Note also "recipe-elasticsearch". This last entry is the name of your project directory. This name has been used to create an index in your elasticsearch (you can change the name of the index by providing a name in abe.json).
+The ajax request then use this query. Note in the "url" that we query localhost:9200. Note also "recipe-elasticsearch_single". This last entry is the name of your project directory + the template you want to search. This name has been used to create an index in your elasticsearch (you can change the name of the index by providing a name in abe.json).
 On success, we get the item._source.article_title as label and item_id as id.
 
 ```
 $.ajax({
   url: "http://localhost:9200/recipe-elasticsearch/_search",
+  method: "POST",
+  crossDomain: true,
+  dataType: "JSON",
+  data: JSON.stringify(postData),
+  success: function(data) {
+    response($.map(data.hits.hits, function(item) {
+      return {
+        label: item._source.article_title,
+        id: item._id
+      }
+    }));
+  },
+});
+```
+
+If you want to request contents from several templates:
+
+```
+$.ajax({
+  url: "http://localhost:9200/recipe-elasticsearch_single,recipe-elasticsearch_another-template,recipe-elasticsearch_a-third-template/_search",
   method: "POST",
   crossDomain: true,
   dataType: "JSON",
