@@ -111,6 +111,32 @@ var postData = {
   }
 }
 ```
+
+The URL we're searching on is composed by:
+
+```
+$.ajax({  
+  url: "http://localhost:9200/recipe-elasticsearch_single,recipe-elasticsearch_notindexed/_search",
+  ...
+```
+This part ```recipe-elasticsearch_single,recipe-elasticsearch_notindexed```means that we're searching on documents associated with only 2 types of templates:
+- recipe-elasticsearch_single
+- recipe-elasticsearch_notindexed
+
+You can remove this part if your elasticsearch's cluster is dedicated to your blog. It will then search on the whole content:
+```
+$.ajax({  
+  url: "http://localhost:9200/_search",
+  ...
+```
+
+or you can searchn on several templates (the separator being a comma) or only one, as you like:
+```
+$.ajax({  
+  url: "http://localhost:9200/recipe-elasticsearch_single/_search",
+  ...
+```
+
 On success, we format the result to display it has a table:
 ```
 success:function(data)  
